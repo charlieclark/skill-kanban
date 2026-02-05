@@ -1,3 +1,8 @@
+---
+name: kanban-move
+description: Move a card between columns on the kanban board. Use when the user says "move this task", "mark as done", or "move to in progress".
+---
+
 # /kanban-move
 
 Move a card between columns on the kanban board.

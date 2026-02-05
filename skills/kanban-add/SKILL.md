@@ -1,3 +1,8 @@
+---
+name: kanban-add
+description: Add a new card to the kanban board. Use when the user says "add a task", "create a card", or "add this to my to-do list".
+---
+
 # /kanban-add
 
 Add a new card to the kanban board.

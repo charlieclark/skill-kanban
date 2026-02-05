@@ -1,3 +1,8 @@
+---
+name: kanban-app
+description: Launch an interactive web app to visually manage the kanban board with drag-and-drop. Use when the user says "open the kanban app", "launch the board UI", or "drag and drop tasks".
+---
+
 # /kanban-app
 
 Launch an interactive web app to visually manage the kanban board.

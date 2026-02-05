@@ -1,3 +1,8 @@
+---
+name: kanban-archive
+description: Archive completed cards from the Done column. Use when the user says "archive done tasks", "clean up the board", or "clear completed items".
+---
+
 # /kanban-archive
 
 Archive completed cards from the Done column.

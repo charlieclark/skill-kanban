@@ -1,3 +1,8 @@
+---
+name: kanban-view
+description: View a formatted summary of the kanban board. Use when the user says "show the board", "what's on the kanban", or "list my tasks".
+---
+
 # /kanban-view
 
 View a formatted summary of the kanban board.

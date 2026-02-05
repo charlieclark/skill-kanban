@@ -1,3 +1,8 @@
+---
+name: kanban-review
+description: Analyze kanban board health and provide suggestions. Use when the user says "review my board", "how's the board looking", or "any issues with my kanban".
+---
+
 # /kanban-review
 
 Analyze board health and provide suggestions.

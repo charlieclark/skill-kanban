@@ -1,3 +1,8 @@
+---
+name: kanban-init
+description: Initialize a new KANBAN.md board in the current project. Use when the user says "create a kanban board", "set up task tracking", or "initialize a board".
+---
+
 # /kanban-init
 
 Initialize a new kanban board for the current project.
