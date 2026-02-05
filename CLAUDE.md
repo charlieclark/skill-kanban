@@ -46,12 +46,7 @@ Skills are loaded on-demand — only the skill name and description are loaded a
 
 | Skill | Description |
 |-------|-------------|
-| `/kanban-init` | Create a new KANBAN.md board in the current project |
-| `/kanban-add` | Add a new card to a column |
-| `/kanban-move` | Move a card between columns |
-| `/kanban-view` | View a formatted summary of the board |
-| `/kanban-archive` | Archive completed cards from Done |
-| `/kanban-review` | Analyze board health and get suggestions |
+| `/kanban-cli` | Manage the board — init, add, move, view, archive, and review |
 | `/kanban-app` | Launch the interactive web app |
 
 ## Board Format (KANBAN.md)

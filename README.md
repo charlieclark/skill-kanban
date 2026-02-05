@@ -6,65 +6,25 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 
 ## Available Skills
 
-### kanban-init
+### kanban-cli
 
-Initialize a new kanban board in any project. Creates a `KANBAN.md` file from a template with the three fixed columns and example cards.
+Manage a markdown-based kanban board. A single skill that handles all board operations: creating boards, adding and moving cards, viewing summaries, archiving done items, and reviewing board health.
 
 **Use when:**
 - "Create a kanban board"
-- "Set up task tracking"
-- "Initialize a board for this project"
-
-### kanban-add
-
-Add a new card to any column on the board.
-
-**Use when:**
 - "Add a task to the board"
-- "Create a new card"
-- "Add this to my to-do list"
-
-### kanban-move
-
-Move a card between columns. Supports partial title matching.
-
-**Use when:**
 - "Move this task to in progress"
-- "Mark this as done"
-- "Move card to to-do"
-
-### kanban-view
-
-View a formatted summary of the board with card counts and titles grouped by column.
-
-**Use when:**
 - "Show me the board"
-- "What's on the kanban?"
-- "List my tasks"
-
-### kanban-archive
-
-Archive completed cards from the Done column. Moves them to an Archived section with a date stamp.
-
-**Use when:**
 - "Archive done tasks"
-- "Clean up the board"
-- "Clear completed items"
-
-### kanban-review
-
-Analyze board health and surface potential issues like WIP overload, stale boards, or large Done piles.
-
-**Use when:**
 - "Review my board"
-- "How's the board looking?"
-- "Any issues with my kanban?"
 
-**Checks performed:**
-- WIP overload (too many cards in In Progress)
-- Stale board (empty In Progress with items in To Do)
-- Done pile-up (suggests archiving)
-- Empty board (suggests adding cards)
+**Actions:**
+- **Init** — Create a new `KANBAN.md` from a template
+- **Add** — Add a card to any column (default: To Do)
+- **Move** — Move a card between columns (supports partial title matching)
+- **View** — Show a formatted summary with card counts per column
+- **Archive** — Move Done cards to an Archived section with a date stamp
+- **Review** — Analyze board health (WIP overload, stale board, done pile-up)
 
 ### kanban-app
 
