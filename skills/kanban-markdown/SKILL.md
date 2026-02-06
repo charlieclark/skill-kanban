@@ -1,11 +1,11 @@
 ---
-name: kanban-cli
-description: Manage a markdown-based kanban board (KANBAN.md). Use when the user says "create a kanban board", "add a task", "move a card", "show the board", "archive done tasks", "review board health", or any task management request.
+name: kanban-markdown
+description: Manage a markdown-based kanban board (KANBAN.md) and launch an interactive web app. Use when the user says "create a kanban board", "add a task", "move a card", "show the board", "archive done tasks", "review board health", "open the kanban app", "launch the board UI", or any task management request.
 ---
 
-# /kanban-cli
+# /kanban-markdown
 
-Manage a markdown-based kanban board stored in `KANBAN.md`. Supports creating boards, adding/moving/viewing cards, archiving done items, and reviewing board health.
+Manage a markdown-based kanban board stored in `KANBAN.md`. Supports creating boards, adding/moving/viewing cards, archiving done items, reviewing board health, and launching an interactive drag-and-drop web app.
 
 ## Board Format
 
@@ -82,7 +82,7 @@ Show a board summary. Use when the user wants to see the board or list tasks.
 2. Read and parse all columns and cards.
 3. Display a summary:
    ```
-   📋 **Project Name — Kanban**
+   **Project Name — Kanban**
 
    To Do: 3 | In Progress: 2 | Done: 5
 
@@ -138,6 +138,39 @@ Analyze board health. Use when the user asks about board status or wants suggest
    - **Done pile-up**: "Done" has more than 5 cards — suggest archiving.
    - **Empty board**: All columns empty — suggest adding cards.
 5. Provide an overall health summary.
+
+---
+
+### App
+
+Launch the interactive web app. Use when the user wants a visual UI, drag-and-drop, or says "open the kanban app".
+
+The web app source lives in the GitHub repo: https://github.com/charlieclark/skill-kanban
+
+1. Verify `KANBAN.md` exists in the current working directory. If not, tell the user to run `/kanban-markdown` init first.
+
+2. Check if the kanban app is already cloned. Look for `node_modules` and `web/` inside `{{SKILL_DIR}}`. If the app code is not present, clone it:
+   ```bash
+   git clone https://github.com/charlieclark/skill-kanban.git {{SKILL_DIR}}/app
+   ```
+
+3. Install dependencies if needed:
+   ```bash
+   npm install --prefix {{SKILL_DIR}}/app
+   ```
+
+4. Start the Vite dev server:
+   ```bash
+   KANBAN_FILE="$(pwd)/KANBAN.md" npm run dev --prefix {{SKILL_DIR}}/app
+   ```
+   Run this in the background so the user can continue using the CLI.
+
+5. Tell the user:
+   - The board app is running at **http://localhost:5555**
+   - They can drag and drop cards between columns and reorder within columns
+   - They can add new cards, edit existing ones, and delete cards
+   - All changes are saved directly to `KANBAN.md`
+   - To stop the server, they can press `Ctrl+C` or kill the background process
 
 ## Template Location
 

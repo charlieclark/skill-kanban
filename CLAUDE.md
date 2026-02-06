@@ -6,6 +6,8 @@ This file provides guidance to AI coding agents (Claude Code, Cursor, Copilot, e
 
 A markdown-based kanban board skill for Claude Code. The board lives in a single `KANBAN.md` file with three fixed columns (To Do / In Progress / Done). Includes an interactive Vite + React web app for visual board editing with drag-and-drop.
 
+**Repo:** https://github.com/charlieclark/skill-kanban
+
 ## Creating a New Skill
 
 ### Directory Structure
@@ -46,8 +48,7 @@ Skills are loaded on-demand — only the skill name and description are loaded a
 
 | Skill | Description |
 |-------|-------------|
-| `/kanban-cli` | Manage the board — init, add, move, view, archive, and review |
-| `/kanban-app` | Launch the interactive web app |
+| `/kanban-markdown` | Manage the board (init, add, move, view, archive, review) and launch the interactive web app |
 
 ## Board Format (KANBAN.md)
 
